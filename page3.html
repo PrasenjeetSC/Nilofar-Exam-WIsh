@@ -7,20 +7,30 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: #add8e6; /* Light blue background */
+            color: #00008b; /* Deep blue color for text */
+            font-family: Arial, sans-serif;
         }
-        .message-container {
+        .message {
+            font-size: 48px;
+            font-weight: bold;
             text-align: center;
+        }
+        @media (max-width: 600px) {
+            .message {
+                font-size: 60px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="message-container">
-        <p>All the best for your exam!</p>
+    <div class="message">
+        All the best for your exam!
     </div>
 </body>
 </html>

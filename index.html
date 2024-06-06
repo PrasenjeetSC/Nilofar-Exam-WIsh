@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .cat-container {
+            text-align: center;
+        }
+        .cat-image {
+            width: 200px;
+            height: auto;
+            border-radius: 15px;
+            transition: border-color 0.3s;
+        }
+        .cat-image:hover {
+            border: 3px solid #00008b; /* Darker blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="cat-container">
+        <p>Click Me</p>
+        <img src="cat.avif" alt="Cat" class="cat-image" onclick="navigateToPage2()">
+    </div>
+    <script>
+        function navigateToPage2() {
+            window.location.href = "page2.html";
+        }
+    </script>
+</body>
+</html>

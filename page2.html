@@ -7,43 +7,68 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: #ffffff; /* White background */
+            font-family: Arial, sans-serif;
         }
-        .message-container {
-            text-align: center;
+        .message-box {
+            background-color: #add8e6; /* Light blue */
+            color: #00008b; /* Deep blue */
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            width: 80%;
+            max-width: 500px;
+            align-self: flex-start;
         }
         .next-button {
             display: flex;
-            align-items: center;
-            background-color: #add8e6; /* Match the background of the cat image */
+            justify-content: flex-end;
+            width: 80%;
+            max-width: 500px;
+        }
+        .next-button button {
+            background-color: #add8e6; /* Light blue */
+            color: #00008b; /* Deep blue */
+            font-size: 24px;
+            font-weight: bold;
             border: none;
+            border-radius: 10px;
             padding: 10px 20px;
             cursor: pointer;
-            border-radius: 5px;
         }
-        .next-button img {
-            width: 20px;
-            height: auto;
-            margin-right: 10px;
+        .next-button button:hover {
+            background-color: #00008b;
+            color: #add8e6;
+        }
+        @media (max-width: 600px) {
+            .message-box {
+                font-size: 18px;
+                padding: 15px;
+            }
+            .next-button button {
+                font-size: 18px;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="message-container">
-        <p>Short Message Here</p>
-        <button class="next-button" onclick="navigateToPage3()">
-            <img src="cat.avif" alt="Cat Icon">
-            Next
-        </button>
+    <div class="message-box">
+        Short Message Here<br>
+        Short Message Here<br>
+        Short Message Here<br>
+        Short Message Here<br>
     </div>
-    <script>
-        function navigateToPage3() {
-            window.location.href = "page3.html";
-        }
-    </script>
+    <div class="next-button">
+        <button onclick="location.href='page3.html'">Next</button>
+    </div>
 </body>
 </html>
